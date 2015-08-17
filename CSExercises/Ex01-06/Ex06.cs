@@ -10,7 +10,11 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
+            Console.ReadLine("Please enter the x value");
+            int x;
+            double y;
             
+            Console.WriteLine("the out put is " + y);
         }
     }
 }
