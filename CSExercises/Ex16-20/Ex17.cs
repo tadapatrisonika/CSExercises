@@ -1,54 +1,44 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace CSExercises
 {
     public class Ex17
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("please enter your name");
+            Console.Write("Enter your name: ");
             string name = Console.ReadLine();
-            Console.WriteLine("please enetr your gender");
+            Console.Write("Enter the gender: ");
             string gender = Console.ReadLine();
-            Console.WriteLine("please enter your age");
-            string age = Console.ReadLine();
-            int age1 = Convert.ToInt32(age);
-            if (age1 <= 40)
+            Console.Write("Enter your age: ");
+            int age = Convert.ToInt32(Console.ReadLine());
+            if (gender == "male")
             {
-                if (gender.Equals("M"))
-                {
-                    Console.WriteLine("good morning Mr " + name);
-
-                }
-                else if (gender.Equals("F"))
-                {
-                    Console.WriteLine("good morning Ms " + name);
-                }
+                if (age >= 40)
+                    Console.Write("Good morning" + "uncle" + name);
                 else
-                {
-                    Console.WriteLine("put in the correct input");
-                }
+                    Console.Write("Good morning" + "Mr." + name);
 
             }
-            else if (age1 >= 40)
+            else if (gender == "female")
             {
-                if (gender.Equals("M"))
-                {
-                    Console.WriteLine("good morning Uncle " + name);
-
-                }
-                else if (gender.Equals("F"))
-                {
-                    Console.WriteLine("good morning Aunty " + name);
-                }
+                if (age >= 40)
+                    Console.Write("Good morning" + "aunty" + name);
                 else
-                {
-                    Console.WriteLine("put in the correct input");
-                }
+                    Console.Write("Good morning" + "Ms." + name);
+
             }
             else
             {
-                Console.WriteLine("wrong input");
+                Console.WriteLine("There is an error");
             }
+
         }
+
     }
+
 }

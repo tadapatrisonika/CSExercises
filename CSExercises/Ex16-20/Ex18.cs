@@ -1,41 +1,36 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace CSExercises
 {
     public class Ex18
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("please enter your marks");
-            string marks = Console.ReadLine();
-            int marks1 = Convert.ToInt32(marks);
-            if (marks1 <= 100 && marks1 >= 80)
+            Console.WriteLine("enter the mark between 0 to 100: ");
+            int mark = Convert.ToInt32(Console.ReadLine());
+            if(mark<=100 && mark>=80)
             {
-                Console.WriteLine("the grade you got is A");
-
+                Console.WriteLine("you scored " + mark + "marks which is A grade.");
             }
-            else if(marks1 <= 79 && marks1 >= 60)
-            { 
-                Console.WriteLine("the grade you got is B");
-            }
-            else if(marks1 <= 59 && marks1 >= 40)
+            else if (mark <= 79 && mark >= 60)
             {
-                Console.WriteLine("the grade you got is C");
+                Console.WriteLine("you scored " + mark + "marks which is B grade.");
             }
-            else if(marks1 <= 40 && marks1 >=0)
+            else if (mark >= 40 && mark <=59 )
             {
-                Console.WriteLine("the grade you got is F");
+                Console.WriteLine("you scored " + mark + "marks which is C grade.");
             }
-            else if(marks1 <0)
+            else if (mark >= 0 && mark <= 39)
             {
-                Console.WriteLine("please enter the marks between 1-100");
-            }
-            else if (marks1 > 100)
-            {
-                Console.WriteLine("please enter the marks between 1-100");
+                Console.WriteLine("you scored " + mark + "marks which is F grade.");
             }
             else
             {
-                Console.WriteLine("please enter the marks correctely");
+                Console.WriteLine("**ERROR**");
             }
         }
     }

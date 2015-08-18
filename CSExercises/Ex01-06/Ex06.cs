@@ -10,11 +10,13 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            Console.ReadLine("Please enter the x value");
-            int x;
-            double y;
-            
-            Console.WriteLine("the out put is " + y);
+            int number;
+            double squareroot;
+            Console.Write("enter a number: ");
+            number = Convert.ToInt32(Console.ReadLine());
+            squareroot = System.Math.Sqrt(number);
+            Console.Write("square root of {0} is " + squareroot, number);
+          
         }
     }
 }
